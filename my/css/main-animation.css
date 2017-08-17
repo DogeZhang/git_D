@@ -135,3 +135,32 @@
         transform: translate(0px, 0px) rotate(15.5deg)
     }
 }
+
+.video_url_input{
+    -webkit-animation-name: spread;
+    -ms-animation-name: spread;
+    animation-name: spread;
+    -webkit-animation: 5s ease;
+    -ms-animation: 5s ease;
+    animation: 5s ease;
+    -webkit-transition-property:all;
+    -moz-transition-property:all;
+    transition-property:all;
+}
+@keyframes spread{
+    0% {
+        width: 100px;
+    }
+    25% {
+        width: 200px;
+    }
+    50%{
+        width: 300px;
+    }
+    75%{
+        width: 400px;
+    }
+    100%{
+        width: 500px;
+    }
+}

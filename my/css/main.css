@@ -406,6 +406,12 @@ div:focus{
 									line-height: 30px;
 									color: #a1a1a1;
 							 	 }
+						.photo_music_file_upload_v{
+			 	 			position: absolute;
+			 	 			width: 270px;
+			 	 			height: 220px;
+			 	 			top: 0px;
+			 	 		 }
 						.split_line{
 							float: left;
 							height: 180px;
@@ -445,6 +451,31 @@ div:focus{
 									line-height: 30px;
 									color: #a1a1a1;
 							 	 }
+						.new_post_photo_input_url{
+							height: 30px;
+							width: 500px;
+							margin-top: 20px;
+							margin-left: 20px;
+							border: none;
+							font-family: "Microsoft YaHei";
+							font-size: 14px;
+						 }
+						.new_post_photo_input_url:focus{
+							outline: none;
+						}
+						.new_post_photo_input_border{
+							margin-left: 20px;
+							height: 2px;
+							width: 500px;
+							background: yellow;
+						 }
+						 	.new_post_photo_input_bc{
+						 		height: 2px;
+						 		width: 100px;
+						 		margin: 0 auto;
+						 		background: black;
+						 		position: relative;
+						 	 }
 						.video_media_wrapper{
 							height: 100%;
 							width: 100%;
@@ -453,7 +484,7 @@ div:focus{
 						 		position: absolute;
 						 		width: 540px;
 						 		min-height: 300px;
-						 	}
+						 	 }
 					.new_post_video_text_content{
 	 	 		 		min-height: 60px;
 	 	 		 		height: auto;
