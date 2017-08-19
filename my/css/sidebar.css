@@ -1,10 +1,9 @@
 body{
-	margin: 0px;
-	padding: 0px;
-	background: #77B3D4;
+  margin: 0px;
+  padding: 0px;
  }
 span{
-	font-family: "Lucida Grande, Geneva, sans-serif, Microsoft YaHei";
+  font-family: "Lucida Grande, Geneva, sans-serif, Microsoft YaHei";
  }
 a{
     text-decoration: none;
@@ -22,206 +21,206 @@ html *:after {
 }
 
 .sidebar{
-	width: 60px;
-	height: 100%;
-	text-align: left;
-	z-index: 1;
-	box-shadow: 3px 0 20px #A2B4D0;
-	position: fixed;
-	left: 0;
-	top: 0;
-	/* test*/
-	background: #5F6CFE;	
+  width: 60px;
+  height: 100%;
+  text-align: left;
+  z-index: 1;
+  box-shadow: 3px 0 20px #A2B4D0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  /* test*/
+  background: #5F6CFE;  
  }
-	.user{ /* 用户信息 */
-	 }
-		.user_cover{
-			width: 80px;
-			height: 80px;
-			background: white;
-			border-radius: 50%;
-			margin-top:5px;
-			margin-left:5px;
-		}
-		.user_Info{
-			position: relative;
-		 }
-			.touxiang{
-				width: 80px;
-				height: 80px;
-				border-radius: 50%;
-				border:5px solid #5F6CFE;
-				position:fixed;
-				top:0px;
-			 }
-			.user .user_Info h2{
-				opacity: 0;
-				margin-left:130px;
-				font-family: "Lucida Grande, Geneva, sans-serif, Microsoft YaHei";
-			}
-	.menu{ /* 导航栏菜单 */
-		position:absolute;
-		top: 200px;
-		left:-1px;
-	 }
-		.menu li{
-			padding:13px 10px;
-			list-style-type: none;
-			position: relative;
-		 }       /* 菜单信息 */
-			
- 	        .menu-icon{
- 	        	padding:4px;
-				font-size: 33px;
-				color:#F0FCFF;
-				border-radius: 50%;
-			 }
-			#menu_button:hover,.menu li:hover .fa{
-				color:  #5F6CFE;
-				background: white;
-			 }
-			.menu li:hover .menu_title{ /* 提示框 */
-				display:block;
-				transform-origin: 100% 0%;
+  .user{ /* 用户信息 */
+   }
+    .user_cover{
+      width: 80px;
+      height: 80px;
+      background: white;
+      border-radius: 50%;
+      margin-top:5px;
+      margin-left:5px;
+    }
+    .user_Info{
+      position: relative;
+     }
+      .touxiang{
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        border:5px solid #5F6CFE;
+        position:fixed;
+        top:0px;
+       }
+      .user .user_Info h2{
+        opacity: 0;
+        margin-left:130px;
+        font-family: "Lucida Grande, Geneva, sans-serif, Microsoft YaHei";
+      }
+  .menu{ /* 导航栏菜单 */
+    position:absolute;
+    top: 200px;
+    left:-1px;
+   }
+    .menu li{
+      padding:13px 10px;
+      list-style-type: none;
+      position: relative;
+     }       /* 菜单信息 */
+      
+      .menu-icon{
+        padding:4px;
+        font-size: 33px !important;
+        color:#F0FCFF;
+        border-radius: 50%;
+       }
+      #menu_button:hover,.menu li:hover .menu-fa{
+        color:  #5F6CFE;
+        background: white;
+       }
+      .menu li:hover .menu_title{ /* 提示框 */
+        display:block;
+        transform-origin: 100% 0%;
 
-				-webkit-animation: fadeIn 0.3s ease-in-out;
-				animation: fadeIn 0.3s ease-in-out;
-			 }
-				.menu_title{
-					display:none;
-					line-height:30px;
-					padding:0 10px;
-					border-radius:3px;
-					color: white; 
-					background: #5F6CFE;
-					position:absolute;
-					top:10px;
-					left:75px;
-				 }
-				.menu_title:before{
-					position: absolute;
-					content: '';
-					width:0;
-					height: 0;
-					border:6px solid transparent;
-					border-bottom-color:#5F6CFE;
-					left:-12px;
-					top:13px;
-					-webkit-transform :rotate(-90deg);
-					-moz-transform :rotate(-90deg);
-					-o-transform  :rotate(-90deg);
-					transform   :rotate(-90deg);
-				 }
-		/* 提示框css3 */
-			@-webkit-keyframes fadeIn {
-				0% { 
-					opacity:0; 
-					transform: scale(0.6);
-				}
+        -webkit-animation: fadeIn 0.3s ease-in-out;
+        animation: fadeIn 0.3s ease-in-out;
+       }
+        .menu_title{
+          display:none;
+          line-height:30px;
+          padding:0 10px;
+          border-radius:3px;
+          color: white; 
+          background: #5F6CFE;
+          position:absolute;
+          top:10px;
+          left:75px;
+         }
+        .menu_title:before{
+          position: absolute;
+          content: '';
+          width:0;
+          height: 0;
+          border:6px solid transparent;
+          border-bottom-color:#5F6CFE;
+          left:-12px;
+          top:13px;
+          -webkit-transform :rotate(-90deg);
+          -moz-transform :rotate(-90deg);
+          -o-transform  :rotate(-90deg);
+          transform   :rotate(-90deg);
+         }
+    /* 提示框css3 */
+      @-webkit-keyframes fadeIn {
+        0% { 
+          opacity:0; 
+          transform: scale(0.6);
+        }
 
-				100% {
-					opacity:100%;
-					transform: scale(1);
-				}
-			 }
+        100% {
+          opacity:100%;
+          transform: scale(1);
+        }
+       }
 
-			@keyframes fadeIn {
-				0% { opacity:0; }
-				100% { opacity:100%; }
-			 }
+      @keyframes fadeIn {
+        0% { opacity:0; }
+        100% { opacity:100%; }
+       }
 .open{ /* 展开样式 */
-	width: 300px;
-	transition: width .3s ease-out;
+  width: 300px;
+  transition: width .3s ease-out;
  }
-	.open .user{
-		height:200px;
-		overflow: hidden;
-	 }
-		.open .user .user_cover{
-			-webkit-transform: scale(10);
-			transform: scale(10);
-			-webkit-transition: -webkit-transform 1s ease;
-			transition: transform 1s ease;
-		 }
-		.open .user .user_Info .touxiang{
-			top: 80px;
-			left: 20px;
-			border-color: white;
-			box-shadow: 0px 0px 0px 0px #B0B8C5;
-			transition: .3s ease-in;
-			transition: left .6s ease-out;
-			transition: top .6s ease-out;
-	  	 }
-		.open .user .user_Info h2{
-			opacity: 1;
-			margin-top: 30px;
-			transition: .4s ease-in;
-    	 }
+  .open .user{
+    height:200px;
+    overflow: hidden;
+   }
+    .open .user .user_cover{
+      -webkit-transform: scale(10);
+      transform: scale(10);
+      -webkit-transition: -webkit-transform 1s ease;
+      transition: transform 1s ease;
+     }
+    .open .user .user_Info .touxiang{
+      top: 80px;
+      left: 20px;
+      border-color: white;
+      box-shadow: 0px 0px 0px 0px #B0B8C5;
+      transition: .3s ease-in;
+      transition: left .6s ease-out;
+      transition: top .6s ease-out;
+       }
+    .open .user .user_Info h2{
+      opacity: 1;
+      margin-top: 30px;
+      transition: .4s ease-in;
+       }
     .open .menu{
         top:250px;
         transition: .3s ;
      }
-	.open .menu li{
-		overflow: hidden;
-    	padding-left:20px;
-    	width:270px;
-    	transition:padding-left .7s ease-out;
+  .open .menu li{
+    overflow: hidden;
+      padding-left:20px;
+      width:270px;
+      transition:padding-left .7s ease-out;
      }
-	.open .menu li:after {
-			content: '';
-			width: 0;
-			height: 0;
-			-webkit-transform: rotate(360deg);
-			border-style: solid;
-			border-width: 0 0 0 0;
-			border-color: #1F2CEF transparent transparent transparent;
-			position: absolute;
-			top: 0;
-			left: 0;
-		 }
-	.open .menu li:hover {
-			color: #ecdcd4;
-		 }
-	.open .menu li:hover:after {
-			border-width: 390px 390px 0 0;
-		 }
-	.open .menu li:active {
-			background: #1BFFEF;
-		 }
+  .open .menu li:after {
+      content: '';
+      width: 0;
+      height: 0;
+      -webkit-transform: rotate(360deg);
+      border-style: solid;
+      border-width: 0 0 0 0;
+      border-color: #1F2CEF transparent transparent transparent;
+      position: absolute;
+      top: 0;
+      left: 0;
+     }
+  .open .menu li:hover {
+      color: #ecdcd4;
+     }
+  .open .menu li:hover:after {
+      border-width: 390px 390px 0 0;
+     }
+  .open .menu li:active {
+      background: #1BFFEF;
+     }
     .open .menu li span{
-    	padding-left: 30px;
-    	letter-spacing: 4px;
-    	color: white;
-    	transition: padding-left 5s ease;
+      padding-left: 30px;
+      letter-spacing: 4px;
+      color: white;
+      transition: padding-left 5s ease;
      }
     .open .hamburglar{
-    	left: 110px;
-    	transition: .3s ease-out;
+      left: 110px;
+      transition: .3s ease-out;
      }
 /* menu-button */
-	.hamburglar {
-		margin-top: -100px;
-		position: absolute;
-		top: 100%;
-		display: block;
-		-webkit-transform: scale(0.8);
-		transform: scale(0.8);
-		-webkit-user-select: none;
-		-moz-user-select: none;
-		-ms-user-select: none;
-		user-select: none;
-	 }
+  .hamburglar {
+    margin-top: -100px;
+    position: absolute;
+    top: 100%;
+    display: block;
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+   }
 
-	.path-burger {
-		position: absolute;
-		top: 0;
-		left: 0;
-		height: 68px;
-		width: 68px;
-		-webkit-mask: url(#mask);
-		        mask: url(#mask);
-		-webkit-mask-box-image: url(mask.svg);
-	 }
+  .path-burger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 68px;
+    width: 68px;
+    -webkit-mask: url(#mask);
+            mask: url(#mask);
+    -webkit-mask-box-image: url(mask.svg);
+   }
 
   .animate-path {
     position: absolute;
@@ -249,62 +248,62 @@ html *:after {
     background: #fff;
   }
 
-	@-webkit-keyframes rotate-out {
-	    0% {
-	      -webkit-transform: rotate(0deg);
-	              transform: rotate(0deg);
-	    }
-	    40% {
-	      -webkit-transform: rotate(180deg);
-	              transform: rotate(180deg);
-	    }
-	    100% {
-	      -webkit-transform: rotate(360deg);
-	              transform: rotate(360deg);
-	    }
+  @-webkit-keyframes rotate-out {
+      0% {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+      }
+      40% {
+        -webkit-transform: rotate(180deg);
+                transform: rotate(180deg);
+      }
+      100% {
+        -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+      }
      }
     @keyframes rotate-out {
-			    0% {
-			      -webkit-transform: rotate(0deg);
-			              transform: rotate(0deg);
-			    }
-			    40% {
-			      -webkit-transform: rotate(180deg);
-			              transform: rotate(180deg);
-			    }
-			    100% {
-			      -webkit-transform: rotate(360deg);
-			              transform: rotate(360deg);
-			    }
-			 }
-	@-webkit-keyframes rotate-in {
-		0% {
-		  -webkit-transform: rotate(360deg);
-		          transform: rotate(360deg);
-		}
-		40% {
-		  -webkit-transform: rotate(180deg);
-		          transform: rotate(180deg);
-		}
-		100% {
-		  -webkit-transform: rotate(0deg);
-		          transform: rotate(0deg);
-		}
-	 }
+          0% {
+            -webkit-transform: rotate(0deg);
+                    transform: rotate(0deg);
+          }
+          40% {
+            -webkit-transform: rotate(180deg);
+                    transform: rotate(180deg);
+          }
+          100% {
+            -webkit-transform: rotate(360deg);
+                    transform: rotate(360deg);
+          }
+       }
+  @-webkit-keyframes rotate-in {
+    0% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+    40% {
+      -webkit-transform: rotate(180deg);
+              transform: rotate(180deg);
+    }
+    100% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+   }
     @keyframes rotate-in {
-			    0% {
-			      -webkit-transform: rotate(360deg);
-			              transform: rotate(360deg);
-			    }
-			    40% {
-			      -webkit-transform: rotate(180deg);
-			              transform: rotate(180deg);
-			    }
-			    100% {
-			      -webkit-transform: rotate(0deg);
-			              transform: rotate(0deg);
-			    }
-			 }
+          0% {
+            -webkit-transform: rotate(360deg);
+                    transform: rotate(360deg);
+          }
+          40% {
+            -webkit-transform: rotate(180deg);
+                    transform: rotate(180deg);
+          }
+          100% {
+            -webkit-transform: rotate(0deg);
+                    transform: rotate(0deg);
+          }
+       }
   .hamburglar.is-open .path {
     -webkit-animation: dash-in 0.6s linear normal;
             animation: dash-in 0.6s linear normal;
@@ -337,50 +336,50 @@ html *:after {
     stroke-linejoin: round;
   }
 
-	@-webkit-keyframes dash-in {
-	    0% {
-	      stroke-dashoffset: 240;
-	    }
-	    40% {
-	      stroke-dashoffset: 240;
-	    }
-	    100% {
-	      stroke-dashoffset: 0;
-	    }
-	 }
-	@keyframes dash-in {
-	    0% {
-	      stroke-dashoffset: 240;
-	    }
-	    40% {
-	      stroke-dashoffset: 240;
-	    }
-	    100% {
-	      stroke-dashoffset: 0;
-	    }
-	 }
+  @-webkit-keyframes dash-in {
+      0% {
+        stroke-dashoffset: 240;
+      }
+      40% {
+        stroke-dashoffset: 240;
+      }
+      100% {
+        stroke-dashoffset: 0;
+      }
+   }
+  @keyframes dash-in {
+      0% {
+        stroke-dashoffset: 240;
+      }
+      40% {
+        stroke-dashoffset: 240;
+      }
+      100% {
+        stroke-dashoffset: 0;
+      }
+   }
     @-webkit-keyframes dash-out {
-	    0% {
-	      stroke-dashoffset: 0;
-	    }
-	    40% {
-	      stroke-dashoffset: 240;
-	    }
-	    100% {
-	      stroke-dashoffset: 240;
-	    }
-	 }
-	@keyframes dash-out {
-		0% {
-			stroke-dashoffset: 0;
-		}
-		40% {
-			stroke-dashoffset: 240;
-		}
-		100% {
-			stroke-dashoffset: 240;
-		}
-	 }
+      0% {
+        stroke-dashoffset: 0;
+      }
+      40% {
+        stroke-dashoffset: 240;
+      }
+      100% {
+        stroke-dashoffset: 240;
+      }
+   }
+  @keyframes dash-out {
+    0% {
+      stroke-dashoffset: 0;
+    }
+    40% {
+      stroke-dashoffset: 240;
+    }
+    100% {
+      stroke-dashoffset: 240;
+    }
+   }
   .burger-icon {
     position: absolute;
     padding: 20px 16px;
