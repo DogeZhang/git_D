@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>	
+	<head>	
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<title> 动态主页 </title>
+		
+		
+		<link rel="stylesheet" type="text/css" href="css/sidebar.css"> <!-- 侧栏样式导入 -->
+		<script src="js/jquery-3.2.1.js"></script> 
+		<script src="js/sidebar.js" type="text/javascript" charset="utf-8" async defer></script>
+		<style type="text/css">
+			.icon {
+			   width: 150px; height: 150px;
+			   vertical-align: -0.15em;
+			   fill: currentColor;
+			   overflow: hidden;
+			}
+			/* 新 侧栏 */
+			@font-face {font-family: "iconfont";
+	          src: url('src/icon_new_post/iconfont.eot'); /* IE9*/
+	          src: url('src/icon_new_post/iconfont.eot#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	          url('src/icon_new_post/iconfont.woff') format('woff'), /* chrome, firefox */
+	          url('src/icon_new_post/iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+	          url('src/icon_new_post/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+	        }
+	        .iconfont {
+	          font-family:"iconfont" !important;
+	          font-style:normal;
+	          -webkit-font-smoothing: antialiased;
+	          -webkit-text-stroke-width: 0.1px;
+	          -moz-osx-font-smoothing: grayscale;
+	        }
+	        /* END 新 侧栏 */
+		 </style>
+
+	</head>
+	<body>
+		<div class='sidebar'>   <!-- 侧栏 -->
+			<div class='user'>                                <!-- 用户信息 -->
+			   <div class='user_cover'></div>  
+			   <div class='user_Info'>
+				   <img src="src/img/touxiang.jpg" class="touxiang">
+				   <h2>username</h2>
+				   <nav class='infomations' style="display: none">
+				      <li>1</li>
+				      <li>2</li>
+				      <li>3</li>
+				     </nav>
+				 </div>
+			 </div>
+			<nav class='menu'>                                <!-- 导航栏 -->
+				<li>
+				    <a href="#"><i class="icon iconfont fa">&#xe61f;</i><span class="menu_title">首页</span></a>
+				 </li>
+				<li>
+					<a href="#"><i class="icon iconfont fa">&#xe61f;</i><span class="menu_title">首页</span></a>
+				 </li>
+				<li>
+					<a href="#"><i class="icon iconfont fa">&#xe61f;</i><span class="menu_title">首页</span></a>
+				 </li>
+				<li>
+					<a href="#"><i class="icon iconfont fa">&#xe61f;</i><span class="menu_title">首页</span></a>
+				 </li>
+			 </nav>
+			<div id="hamburger" class="hamburglar is-closed"> <!-- 菜单按钮 -->
+				<div class="burger-icon">
+					<div class="burger-container">
+						<span class="burger-bun-top"></span>
+						<span class="burger-filling"></span>
+						<span class="burger-bun-bot"></span>
+					 </div>
+				 </div>
+				<!-- svg ring containter -->
+				<div class="burger-ring">
+					<svg class="svg-ring">
+					<path class="path" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="4" d="M 34 2 C 16.3 2 2 16.3 2 34 s 14.3 32 32 32 s 32 -14.3 32 -32 S 51.7 2 34 2" />
+					</svg>
+				 </div>
+				<!-- the masked path that animates the fill to the ring -->
+
+				<svg width="0" height="0">
+					<mask id="mask">
+					<path xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#ff0000" stroke-miterlimit="10" stroke-width="4" d="M 34 2 c 11.6 0 21.8 6.2 27.4 15.5 c 2.9 4.8 5 16.5 -9.4 16.5 h -4" />
+					 </mask>
+				 </svg>
+				<div class="path-burger">
+					<div class="animate-path">
+						<div class="path-rotation"></div>
+					 </div>
+				 </div>
+			 </div>
+		 </div>
+	 </body>
+</html>
