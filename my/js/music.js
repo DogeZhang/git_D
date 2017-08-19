@@ -45,8 +45,10 @@
         var base64 = "data:" + image.format + ";base64," +
                 window.btoa(base64String);
         document.getElementById('picture').setAttribute('src',base64);
+        $('#new_post_music_text_content').slideDown();
       } else {
         document.getElementById('picture').setAttribute('src','10b88d166dea481c94939731ac30ed21.jpg');
+        $('#new_post_music_text_content').slideDown();
       }
     }
 $(document).ready(function(){

@@ -29,7 +29,8 @@ function loadFile_video(input){
 		document.getElementById("video_player").poster = "https://68.media.tumblr.com/tumblr_oupbh4694j1uvv5gh_smart1.jpg";
 		document.getElementById("video_player").height = pic.height;
 			document.getElementById("video_player").width = pic.width;
-*/
+		*/
+		$('#new_post_video_text_content').slideDown();
 }
 $(document).ready(function(){
 	$('.new_post_photo_input_url').focus(function(){

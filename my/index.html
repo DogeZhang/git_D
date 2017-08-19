@@ -101,6 +101,249 @@
 					 </div>
 				 </div>
 		 </div>
+		<!-- 编辑页面 -->
+		<div id="cover" class="cover" style="display: none;">
+			<!-- 文字编辑 -->
+			<div id="new_post_text_container" class="new_post_text_container new_post_container" style="display: none;">
+            	<div class="new_post_container_header">
+                    <div class="new_post_container_header_left">
+                    	<span>(用户名)</span>
+                     </div>
+                    <div class="new_post_container_header_right">
+                    	<img class="new_post_publish_icon" src="src/icon_new_post/publish_2.svg"/>
+                     </div>
+                 </div>
+                <div id="new_post_text_content" class="new_post_text_content" contenteditable="true">
+                	<span style="color:#999">来写点什么吧！</span>
+                 </div>
+                <div id="new_post_text_label" class="new_post_text_label" contenteditable="true">
+                	<span style="color:#999">#标签</span>
+                 </div>
+                <div style="height: 10px"></div>
+             </div>
+            <!-- 图片编辑 -->
+            <div id="new_post_photo_container" class="new_post_photo_container new_post_container" style="display: none;">
+         		<!-- 窗口标头 -->
+         		<div class="new_post_container_header">
+                    <div class="new_post_container_header_left">
+                    	<span>(用户名)</span>
+                     </div>
+                    <div class="new_post_container_header_right">
+                    	<img class="new_post_publish_icon" src="src/icon_new_post/publish_2.svg"/>
+                     </div>
+                 </div>
+                <!-- 窗口内容 -->
+                <div id="new_post_photo_content_before" class="new_post_photo_content">
+                	<div class="photo_music_file_example_div">
+                		<img class="photo_music_file_example" src="src/icon_new_post/photo_example_2.svg"/>
+                	 </div>
+                	<div class="photo_music_file_example_text">
+						<span>添加图片</span>
+					 </div>
+					<div id="photo_music_file_upload-p" class="photo_music_file_upload">
+				 		<input class="photo_music_file_input" type="file" multiple="multiple" name="music" accept="image/*" onchange="loadFile_photo(this)">
+				 	 </div>
+                 </div>
+                <!--  内容示例 --> 
+                <div id="new_post_photo_content_after" class="new_post_photo_content" style="display: none;">
+                	<!-- 更多图片 -->
+                	<div id="photo_content" style="width: 540px;">
+                	</div>
+					<!-- 添加图片 -->
+					<div class="photo_file_upload_more_div">
+						<div class="upload_container">
+							<div class="photo_example">
+								<img class="photo_icon" src="src/icon_new_post/photo_example_2.svg"/>
+							 </div>
+							<div class="photo_text">
+								<span>添加更多照片</span>
+							 </div>
+						 </div>
+						<div id="photo_music_file_upload-p" class="photo_music_file_upload_more">
+				 			<input class="photo_music_file_input" type="file"  multiple="multiple" name="music" accept="image/*" onchange="loadFile_photo(this)">
+				 	 	 </div>
+					 </div>
+
+                 </div>
+                <!-- 底部标签 -->
+                <div id="new_post_photo_text_content" class="new_post_photo_text_content" contenteditable="true" style="display: none;">
+                	<span style="color:#999">say something...?</span>
+                 </div>
+                <div id="new_post_photo_label" class="new_post_photo_label" contenteditable="true">
+                	<span style="color:#999">#标签</span>
+                 </div>
+                <div class="new_post_bottom" style="background: #5F6CFE"></div>
+         	 </div>
+         	<!-- 音乐编辑 -->
+        	<div id="new_post_music_container" class="new_post_music_container new_post_container" style="display: none;">
+        		<!-- 窗口标头 -->
+        		<div class="new_post_container_header">
+                    <div class="new_post_container_header_left">
+                    	<span>(用户名)</span>
+                     </div>
+                    <div class="new_post_container_header_right">
+                    	<img class="new_post_publish_icon" src="src/icon_new_post/publish_2.svg"/>
+                     </div>
+                 </div>
+                <!-- 窗口内容 -->
+                <!--
+                <form>
+                    <div id="new_post_music_content" class="new_post_music_content">
+                    	<div class="new_post_music_search">
+                    		<input class="new_post_music_search_input" type="text" name="music_search" placeholder="搜索你想要的音乐吧！"/>
+                    	 </div>
+                    	 <div class="new_post_music_submit_div">
+                    	 	<button class="new_post_music_submit" type="submit" name="music_search"><span>搜索</span></button>
+                    	 	<button class="new_post_music_local"><span>本地</span></button>
+                    	  </div>
+                     </div>
+                 </form>
+                -->
+                <div id="new_post_music_content" class="new_post_music_content">
+                    
+					<div class="photo_music_file_example_div">
+                		<img class="photo_music_file_example music_icon" src="src/icon_new_post/music_example_3.svg"/>
+                	 </div>
+                	<div id="photo_music_file_example_text" class="photo_music_file_example_text">
+                		<img id="photo_music_file_example_text1" class="photo_music_file_example_gif" src="src/icon_new_post/share-music.png">
+						<img id="photo_music_file_example_text2" style="display: none;" class="photo_music_file_example_gif" src="src/icon_new_post/share-music.gif">
+					 </div>
+				 	 
+				 	<div id="photo_music_file_upload-m" class="photo_music_file_upload">
+				 		<input class="photo_music_file_input" type="file" name="music" accept="audio/mp3" onchange="loadFile_music(this)">
+				 	 </div>
+                 </div>
+
+                <div id="music_cover" class="music_cover">
+                	
+					<img id="picture" class="music_cover music_picture" src="">
+					<div style="display: none" class="music_ID3">
+						<div><span id="title" class="ID3_font"></span></div>
+						<div><span id="artist" class="ID3_font"></span></div>
+						<div><span id="album" class="ID3_font"></span></div>
+					 </div>
+                 </div>
+                <div class="media-wrapper" id="music_media_wrapper" style="display: none;">
+	                <audio id="music_player" class="mejs__player" preload="none" controls style="max-width:100%;" src="" type="audio/mp3">
+	                    <!-- 娱乐天空 - 陈奕迅.flac
+	                    	 最后的抉择 - 布拉格恋人 (프라하의 연인).mp3
+	                    -->
+	                 </audio>
+	             </div>
+                <!-- 底部标签 -->
+                <div id="new_post_music_text_content" class="new_post_music_text_content" contenteditable="true" style="display: none;">
+                	<span style="color:#999">say something...?</span>
+                 </div>
+                <div id="new_post_music_label" class="new_post_music_label" contenteditable="true">
+                	<span style="color:#999">#标签</span>
+                 </div>
+                <div style="height: 10px"></div>
+        	 </div>
+        	<!-- 视频编辑 -->
+        	<div id="new_post_video_container" class="new_post_video_container new_post_container" style="display: none;">
+        		<!-- 窗口标头 -->
+        		<div class="new_post_container_header">
+                    <div class="new_post_container_header_left">
+                    	<span>(用户名)</span>
+                     </div>
+                    <div class="new_post_container_header_right">
+                    	<img class="new_post_publish_icon" src="src/icon_new_post/publish_2.svg"/>
+                     </div>
+                 </div>
+                <!-- 窗口内容 -->
+                <div class="new_post_video_content">
+                 	
+                 	<div class="new_post_video_upload">
+                 		<div class="video_example_div">
+                 			<div class="video_example_icon_div">
+                 				<img class="video_example_icon" src="src/icon_new_post/video_example_1.svg"/>
+                 			 </div>
+                 			<div class="video_example_text">
+                 			 	<span>上传视频吧</span>
+                 			 </div>
+                 		 </div>
+                 	 </div>
+                 	<div class="photo_music_file_upload_v">
+				 		<input class="photo_music_file_input" type="file" name="video" tabindex="-1" accept="video/mp4" onchange="loadFile_video(this)">
+				 	 </div>
+                 	<div class="split_line"></div>
+                 	<div class="new_post_video_url">
+                 		<div class="network_example_div">
+                 			<div class="network_example_icon_div">
+                 				<img class="network_example_icon" src="src/icon_new_post/network_example_1.svg"/>
+                 			 </div>
+                 			<div class="network_example_text">
+                 			 	<span>添加网络链接</span>
+                 			 </div>
+                 		 </div>
+                 	 </div>
+                 	
+                 </div>	 
+				<form>
+					<div class="new_post_video_content" style="background: white;">
+						<input type="url" name="video-url" class="new_post_photo_input_url" style="">
+						<div class="new_post_photo_input_border">
+							<div class="new_post_photo_input_bc"></div>
+						 </div>
+					 </div>
+				 </form>
+                <div id="video_media_wrapper" class="video_media_wrapper" style="display: none">
+	                <video id="video_player" class="mejs__player" style="width: 100%; height: 100%; display: block" poster="" src="" type="video/mp4" loop preload controls playsinline webkit-playsinline height="" width="">
+	                </video>
+	             </div>
+				<!-- 底部标签 -->
+				<div id="new_post_video_text_content" class="new_post_video_text_content" contenteditable="true" style="display: none;">
+                	<span style="color:#999">something...</span>
+                 </div>
+                <div id="new_post_video_label" class="new_post_video_label" contenteditable="true">
+                	<span style="color:#999">#标签</span>
+                 </div>
+                <div style="height: 10px"></div>
+        	 </div>
+			<!-- 文件编辑 -->
+	 		<div id="new_post_file_container" class="new_post_file_container new_post_container" style="display: none;">
+	 			<!-- 窗口标头 -->
+	 			<div class="new_post_container_header">
+		            <div class="new_post_container_header_left">
+		                <span>(用户名)</span>
+		             </div>
+                    <div class="new_post_container_header_right">
+                    	<img class="new_post_publish_icon" src="src/icon_new_post/publish_2.svg"/>
+                     </div>
+		         </div>
+				<!-- 窗口内容 -->
+				<div style="" class="new_post_file_content">
+					<div class="photo_music_file_example_div">
+                		<img class="photo_music_file_example" src="src/icon_new_post/file_example_2.svg"/>
+                	 </div>
+                	<div class="photo_music_file_example_text">
+						<span>添加文件</span>
+					 </div>
+				 </div>
+				<!-- 示例 -->
+				<!-- RAR -->
+				<div class="new_post_file_content">
+					<div class="file_container">
+						<div class="file_type_icon">
+							<svg class="icon" aria-hidden="true">
+							  <use xlink:href="#icon-RAR"></use>
+							 </svg>
+						 </div>
+						<div class="file_name information"><span>jinji的巨人</span></div>
+						<div class="file_type information"><span>RAR</span></div>
+						<div class="file_introduction information"><span>进击的巨人  很厉害  很厉害  兵长  更厉害  更厉害</span></div>
+					 </div>
+				 </div>
+				<!-- 底部标签 -->
+				<div id="new_post_file_text_content" class="new_post_file_text_content" contenteditable="true">
+                	<span style="color:#999">文件简介...</span>
+                 </div>
+                <div id="new_post_file_label" class="new_post_file_label" contenteditable="true">
+                	<span style="color:#999">#标签</span>
+                 </div>
+                <div style="height: 10px"></div>
+			 </div>
+		</div>
 	 	<div class="container"> <!-- 页面内容 -->
 	 		<div class="left"> <!-- 左侧内容 -->
 	 			<ol class="posts"> <!-- 动态容器 -->
@@ -143,256 +386,6 @@
                             	<span class="new_post_label_text">压缩包</span>
                         	 </div>
                         	<div style="height: 10px"></div>
-	 					 </div>
-	 				 </li>
-	 				<!--文字编辑窗口-->
-		            <li id="new_post_text_edit_container" class="posts_container">
-		              	<div class="new_post_text_container">
-		                	<div class="new_post_container_header">
-		                        <div class="new_post_container_header_left">
-		                        	<span>(用户名)</span>
-		                         </div>
-		                        <div class="new_post_container_header_right">
-		                        	<img class="new_post_publish_icon" src="src/icon_new_post/publish_2.svg"/>
-		                         </div>
-		                     </div>
-		                    <div id="new_post_text_content" class="new_post_text_content" contenteditable="true">
-		                    	<span style="color:#999">来写点什么吧！</span>
-		                     </div>
-		                    <div id="new_post_text_label" class="new_post_text_label" contenteditable="true">
-		                    	<span style="color:#999">#标签</span>
-		                     </div>
-		                    <div style="height: 10px"></div>
-		                 </div>
-		             </li>
-		            <!-- 图片编辑窗口 -->
-		            <li id="new_post_photo_edit_container" class="posts_container">
-		             	<div class="new_post_photo_container">
-		             		<!-- 窗口标头 -->
-		             		<div style="margin-left: 10px;margin-right: 10px;" class="new_post_container_header">
-		                        <div class="new_post_container_header_left">
-		                        	<span>(用户名)</span>
-		                         </div>
-		                        <div class="new_post_container_header_right">
-		                        	<img class="new_post_publish_icon" src="src/icon_new_post/publish_2.svg"/>
-		                         </div>
-		                     </div>
-		                    <!-- 窗口内容 -->
-		                    <div id="new_post_photo_content_before" class="new_post_photo_content">
-		                    	<div class="photo_music_file_example_div">
-		                    		<img class="photo_music_file_example" src="src/icon_new_post/photo_example_2.svg"/>
-		                    	 </div>
-		                    	<div class="photo_music_file_example_text">
-									<span>添加图片</span>
-								 </div>
-								<div id="photo_music_file_upload-p" class="photo_music_file_upload">
-							 		<input class="photo_music_file_input" type="file" multiple="multiple" name="music" accept="image/*" onchange="loadFile_photo(this)">
-							 	 </div>
-		                     </div>
-		                    <!--  内容示例 --> 
-		                    <div id="new_post_photo_content_after" class="new_post_photo_content" style="display: none;">
-		                    	<!-- 更多图片 -->
-		                    	<div id="photo_content" style="width: 540px;">
-		                    	</div>
-								<!-- 添加图片 -->
-								<div class="photo_file_upload_more_div">
-									<div class="upload_container">
-										<div class="photo_example">
-											<img class="photo_icon" src="src/icon_new_post/photo_example_2.svg"/>
-										 </div>
-										<div class="photo_text">
-											<span>添加更多照片</span>
-										 </div>
-									 </div>
-									<div id="photo_music_file_upload-p" class="photo_music_file_upload_more">
-							 			<input class="photo_music_file_input" type="file"  multiple="multiple" name="music" accept="image/*" onchange="loadFile_photo(this)">
-							 	 	 </div>
-								 </div>
-
-		                     </div>
-		                    <!-- 底部标签 -->
-		                    <div id="new_post_photo_text_content" class="new_post_photo_text_content" contenteditable="true">
-		                    	<span style="color:#999">something...</span>
-		                     </div>
-		                    <div id="new_post_photo_label" class="new_post_photo_label" contenteditable="true">
-		                    	<span style="color:#999">#标签</span>
-		                     </div>
-		                    <div class="new_post_bottom" style="background: #5F6CFE"></div>
-		             	 </div>
-		             </li>
-		            <!-- 音乐添加窗口 -->
-		            <li id="new_post_music_edit_container" class="posts_container">
-		            	<div class="new_post_music_container">
-		            		<!-- 窗口标头 -->
-		            		<div style="margin-left: 10px;margin-right: 10px;" class="new_post_container_header">
-		                        <div class="new_post_container_header_left">
-		                        	<span>(用户名)</span>
-		                         </div>
-		                        <div class="new_post_container_header_right">
-		                        	<img class="new_post_publish_icon" src="src/icon_new_post/publish_2.svg"/>
-		                         </div>
-		                     </div>
-		                    <!-- 窗口内容 -->
-		                    <!--
-		                    <form>
-			                    <div id="new_post_music_content" class="new_post_music_content">
-			                    	<div class="new_post_music_search">
-			                    		<input class="new_post_music_search_input" type="text" name="music_search" placeholder="搜索你想要的音乐吧！"/>
-			                    	 </div>
-			                    	 <div class="new_post_music_submit_div">
-			                    	 	<button class="new_post_music_submit" type="submit" name="music_search"><span>搜索</span></button>
-			                    	 	<button class="new_post_music_local"><span>本地</span></button>
-			                    	  </div>
-			                     </div>
-			                 </form>
-			                -->
-			                <div id="new_post_music_content" class="new_post_music_content">
-			                    
-								<div class="photo_music_file_example_div">
-		                    		<img class="photo_music_file_example music_icon" src="src/icon_new_post/music_example_3.svg"/>
-		                    	 </div>
-		                    	<div id="photo_music_file_example_text" class="photo_music_file_example_text">
-		                    		<img id="photo_music_file_example_text1" class="photo_music_file_example_gif" src="src/icon_new_post/share-music.png">
-									<img id="photo_music_file_example_text2" style="display: none;" class="photo_music_file_example_gif" src="src/icon_new_post/share-music.gif">
-								 </div>
-							 	 
-							 	<div id="photo_music_file_upload-m" class="photo_music_file_upload">
-							 		<input class="photo_music_file_input" type="file" name="music" accept="audio/mp3" onchange="loadFile_music(this)">
-							 	 </div>
-			                 </div>
-
-			                <div id="music_cover" class="music_cover">
-			                	
-								<img id="picture" class="music_cover music_picture" src="">
-								<div style="display: none" class="music_ID3">
-									<div><span id="title" class="ID3_font"></span></div>
-									<div><span id="artist" class="ID3_font"></span></div>
-									<div><span id="album" class="ID3_font"></span></div>
-								 </div>
-			                 </div>
-			                <div class="media-wrapper" id="music_media_wrapper" style="display: none;">
-				                <audio id="music_player" class="mejs__player" preload="none" controls style="max-width:100%;" src="" type="audio/mp3">
-				                    <!-- 娱乐天空 - 陈奕迅.flac
-				                    	 最后的抉择 - 布拉格恋人 (프라하의 연인).mp3
-				                    -->
-				                 </audio>
-				             </div>
-		                    <!-- 底部标签 -->
-		                    <div id="new_post_music_text_content" class="new_post_music_text_content" contenteditable="true">
-		                    	<span style="color:#999">something...</span>
-		                     </div>
-		                    <div id="new_post_music_label" class="new_post_music_label" contenteditable="true">
-		                    	<span style="color:#999">#标签</span>
-		                     </div>
-		                    <div style="height: 10px"></div>
-		            	 </div>
-		             </li>
-		            <!-- 视频添加窗口 -->
-		            <li id="new_post_video_edit_container" class="posts_container">
-		            	<div class="new_post_video_container">
-		            		<!-- 窗口标头 -->
-		            		<div style="margin-left: 10px;margin-right: 10px;" class="new_post_container_header">
-		                        <div class="new_post_container_header_left">
-		                        	<span>(用户名)</span>
-		                         </div>
-		                        <div class="new_post_container_header_right">
-		                        	<img class="new_post_publish_icon" src="src/icon_new_post/publish_2.svg"/>
-		                         </div>
-		                     </div>
-		                    <!-- 窗口内容 -->
-		                    <div class="new_post_video_content">
-		                     	
-		                     	<div class="new_post_video_upload">
-		                     		<div class="video_example_div">
-		                     			<div class="video_example_icon_div">
-		                     				<img class="video_example_icon" src="src/icon_new_post/video_example_1.svg"/>
-		                     			 </div>
-		                     			<div class="video_example_text">
-		                     			 	<span>上传视频吧</span>
-		                     			 </div>
-		                     		 </div>
-		                     	 </div>
-		                     	<div class="photo_music_file_upload_v">
-							 		<input class="photo_music_file_input" type="file" name="video" tabindex="-1" accept="video/mp4" onchange="loadFile_video(this)">
-							 	 </div>
-		                     	<div class="split_line"></div>
-		                     	<div class="new_post_video_url">
-		                     		<div class="network_example_div">
-		                     			<div class="network_example_icon_div">
-		                     				<img class="network_example_icon" src="src/icon_new_post/network_example_1.svg"/>
-		                     			 </div>
-		                     			<div class="network_example_text">
-		                     			 	<span>添加网络链接</span>
-		                     			 </div>
-		                     		 </div>
-		                     	 </div>
-		                     	
-		                     </div>	 
-						<form>
-							<div class="new_post_video_content" style="background: white;">
-								<input type="url" name="video-url" class="new_post_photo_input_url" style="">
-								<div class="new_post_photo_input_border">
-									<div class="new_post_photo_input_bc"></div>
-								 </div>
-							 </div>
-						 </form>
-		                    <div id="video_media_wrapper" class="video_media_wrapper" style="display: none">
-				                <video id="video_player" class="mejs__player" style="width: 100%; height: 100%; display: block" poster="" src="" type="video/mp4" loop preload controls playsinline webkit-playsinline height="" width="">
-				                </video>
-				             </div>
-							<!-- 底部标签 -->
-							<div id="new_post_video_text_content" class="new_post_video_text_content" contenteditable="true">
-		                    	<span style="color:#999">something...</span>
-		                     </div>
-		                    <div id="new_post_video_label" class="new_post_video_label" contenteditable="true">
-		                    	<span style="color:#999">#标签</span>
-		                     </div>
-		                    <div style="height: 10px"></div>
-		            	 </div>
-		             </li>
-	 				<!-- 文件上传窗口 -->
-	 				<li id="new_post_file_edit_container" class="posts_container">
-	 					<div class="new_post_file_container">
-	 						<!-- 窗口标头 -->
-	 						<div style="margin-left: 10px;margin-right: 10px;" class="new_post_container_header">
-		                        <div class="new_post_container_header_left">
-		                        	<span>(用户名)</span>
-		                         </div>
-		                        <div class="new_post_container_header_right">
-		                        	<img class="new_post_publish_icon" src="src/icon_new_post/publish_2.svg"/>
-		                         </div>
-		                     </div>
-							<!-- 窗口内容 -->
-							<div style="" class="new_post_file_content">
-								<div class="photo_music_file_example_div">
-		                    		<img class="photo_music_file_example" src="src/icon_new_post/file_example_2.svg"/>
-		                    	 </div>
-		                    	<div class="photo_music_file_example_text">
-									<span>添加文件</span>
-								 </div>
-							 </div>
-							<!-- 示例 -->
-							<!-- RAR -->
-							<div class="new_post_file_content">
-								<div class="file_container">
-									<div class="file_type_icon">
-										<svg class="icon" aria-hidden="true">
-										  <use xlink:href="#icon-RAR"></use>
-										 </svg>
-									 </div>
-									<div class="file_name information"><span>jinji的巨人</span></div>
-									<div class="file_type information"><span>RAR</span></div>
-									<div class="file_introduction information"><span>进击的巨人  很厉害  很厉害  兵长  更厉害  更厉害</span></div>
-								 </div>
-							 </div>
-							<!-- 底部标签 -->
-							<div id="new_post_file_text_content" class="new_post_file_text_content" contenteditable="true">
-		                    	<span style="color:#999">文件简介...</span>
-		                     </div>
-		                    <div id="new_post_file_label" class="new_post_file_label" contenteditable="true">
-		                    	<span style="color:#999">#标签</span>
-		                     </div>
-		                    <div style="height: 10px"></div>
 	 					 </div>
 	 				 </li>
 	 				<li class="posts_container">

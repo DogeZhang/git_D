@@ -15,4 +15,5 @@ function loadFile_photo(input){
 	}
 	$('#new_post_photo_content_before').hide();
 	$('#new_post_photo_content_after').show();
+	$('#new_post_photo_text_content').slideDown();
 }

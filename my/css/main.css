@@ -9,7 +9,543 @@ span{
 div:focus{
 	outline: none;
 }
-
+/*文字内容编辑框*/
+.cover{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0,0, 0.8);
+	z-index: 100;
+	overflow: scroll;
+ }
+ 	.new_post_container{
+		height: auto;
+		width: 540px;
+		margin: 50px auto 100px auto;
+		background: white;
+		border-radius: 4px;
+		opacity: 1.0;
+ 	 }
+	.new_post_text_container{
+		
+	 }
+	 	.new_post_container_header{
+	 		height: 35px;
+	 		margin-left: 10px;
+	 		margin-right: 10px;
+	 	 }
+	 		.new_post_container_header_left{
+	 			width: auto;
+	 			float: left;
+	 			line-height: 35px;
+	 			font-size: 15px;
+	 		 }
+	 		.new_post_container_header_right{
+	 			float: right;
+	 			width: auto;
+	 		 }
+		.new_post_publish_icon{
+			height: 25px;
+			width: 25px;
+			padding-top: 5px; 
+		}
+	 	.new_post_text_content{
+	 		min-height: 150px;
+	 		height: auto;
+	 		width: auto;
+	 		background-color: white;
+	 		padding: 5px;
+	 		font-size: 15px;
+	 		font-weight: lighter;
+	 		margin-left: 10px;
+	 		margin-right: 10px;
+	 	 }
+	 	.new_post_text_label{
+	 		min-height: 30px;
+	 		height: auto;
+	 		width: auto;
+	 		background-color: white;
+	 		padding: 5px;
+	 		font-size: 16px;
+	 		margin-left: 10px;
+	 		margin-right: 10px;
+	 	 }
+	 	.new_post_bottom{
+	 		height: 5px;
+	 		border-bottom-right-radius: 4px;
+	 		border-bottom-left-radius: 4px;
+	 	 }
+/*图片内容编辑框*/
+.new_post_photo_container{
+ }
+	.new_post_photo_content{
+	 	position: relative;
+		min-height: 220px;
+		height: auto;
+		width: auto;
+		border-top-style: dashed;
+		border-top-width: 2px;
+		border-top-color: #FFF;
+		border-bottom-style: dashed;
+		border-bottom-width: 2px;
+		border-bottom-color: #FFF;
+		background: #F2F2F2;
+	 }
+	 	.photo_music_file_example_div{
+			width: 60px;
+			height: 60px;
+			float: left;
+			margin-top: 80px;
+			margin-left: 160px;
+			/*
+			border-style: dashed;
+			border-radius: 5px;
+			border-width: 1px;
+			border-color: #a1a1a1;
+			*/
+	 	 }
+ 		 	.photo_music_file_example{
+ 		 		width: 60px;
+ 		 		height: 60px;
+ 		 	 }
+			 	.photo_music_file_example_text{
+			 		float: left;
+			 		height: 60px;
+			 		width: auto;
+			 		margin-top: 80px;
+			 		margin-left: 50px;
+			 		line-height: 60px;
+			 		font-size: 20px;
+			 		color: #a1a1a1;
+			 	 }
+			 	 	.photo_music_file_example_gif{
+			 	 		height: 23px;
+						margin-top: 19px;
+			 	 	}
+			 	.new_photo{
+			 		width: 540px;
+			 	 }
+			 	.photo_file_upload_more_div{
+			 		position: relative;
+			 		height: 40px;
+			 		border-radius: 10px;
+					margin: 4px 5px 5px 5px;
+					border: 2px dashed #a1a1a1;
+			 	 }
+	 		 	.upload_container{
+	 		 		height: 40px;
+	 		 		width: 200px;
+	 		 		margin: 0 auto;
+	 		 	 }
+	 		 	.photo_music_file_upload_more{
+	 		 		position: absolute;
+					width: 540px;
+					height: 40px;
+					top: 0px;
+	 		 	 }	
+	 		 		.photo_example{
+	 		 			height: 36px;
+	 		 			width: 36px;
+	 		 			margin-top: 2px;
+	 		 			float: left;
+	 		 		 }
+	 		 		 	.photo_icon{
+	 		 		 		height: 36px;
+	 		 		 		width: 36px;
+	 		 		 	 }
+	 		 		.photo_text{
+	 		 			float: right;
+	 		 			height: 36px;
+	 		 			margin-top: 2px;
+	 		 			padding-right: 30px;
+	 		 			font-size: 18px;
+	 		 			line-height: 36px;
+	 		 			color: #a1a1a1;
+	 		 		 }
+	 	.new_post_photo_text_content{
+	 		min-height: 120px;
+	 		height: auto;
+	 		width: auto;
+	 		background-color: white;
+	 		padding: 5px;
+	 		margin: 10px;
+	 		font-size: 15px;
+	 		font-weight: lighter;
+	 	 }
+	 	.new_post_photo_label{
+	 		min-height: 30px;
+	 		height: auto;
+	 		width: auto;
+	 		background-color: white;
+	 		padding: 5px;
+	 		margin: 10px;
+	 		font-size: 16px;
+	 	 }
+/*音乐内容编辑框*/
+.new_post_music_container{
+ }
+	.new_post_music_content{
+		position: relative;
+		border-top-style: dashed;
+		border-top-width: 2px;
+		border-top-color: #FFF;
+		border-bottom-style: dashed;
+		border-bottom-width: 2px;
+		border-bottom-color: #FFF;
+		height: 220px;
+		background-color: #F2F2F2;
+	 }
+	 	
+	 	.new_post_music_search:before{
+ 			content: url(src/icon_new_post/music_example_4.png);
+ 			position: absolute;
+ 			z-index: 2;
+ 		 }
+	 		.new_post_music_search{
+				height: 34px;
+				width: auto;
+				margin-left: 30px;
+				padding-top: 20px;
+	 		 }
+		 	 	.new_post_music_search_input{
+					width: 440px;
+					height: 30px;
+					background: white;
+					border-width: 0px;
+					padding-left: 30px;
+					border-radius: 4px;
+		 	 	 }
+		 	 .new_post_music_submit_div{
+				height: 30px;
+				margin-top: 10px;
+				margin-right: 40px;
+		 	 }
+		.new_post_music_submit{
+			height: 30px;
+			width: 80px;
+			background-color: #529ECC;
+			float: right;
+			border: none;
+			border-radius: 4px;
+		 }
+		 .new_post_music_local{
+		 	 height: 30px;
+			width: 80px;
+			background-color: #529ECC;
+			float: right;
+			border: none;
+			border-radius: 4px;
+			margin-right: 20px;
+		 }
+		
+			.music_icon{
+				position: relative;
+				margin: 5px;
+				height: 50px;
+				width: 50px;
+			 }
+		.photo_music_file_upload{
+			position: absolute;
+			width: 540px;
+			height: 220px;
+			top: 0px;
+		 }
+		.photo_music_file_input{
+			position: absolute;
+			top: 0;
+			right: 0;
+			margin: 0;
+			padding: 0;
+			border: 0;
+			opacity: 0;
+			width: 100%;
+			height: 100%;
+			cursor: pointer;
+		 }
+	 	.new_post_music_text_content{
+	 		min-height: 60px;
+	 		height: auto;
+	 		width: auto;
+	 		background-color: white;
+	 		padding: 5px;
+	 		margin: 10px;
+	 		font-size: 15px;
+	 		font-weight: lighter;
+	 	 }
+	 	.new_post_music_label{
+	 		min-height: 30px;
+	 		height: auto;
+	 		width: auto;
+	 		background-color: white;
+	 		padding: 5px;
+	 		margin: 10px;
+	 		font-size: 16px;
+	 		
+	 	 }
+	 	.music_cover{
+	 		width: 540px;
+	 		display: block;
+	 		position: relative;
+	 		
+	 	 }
+	 	 	.music_picture{
+				position: relative;
+	 	 	 }
+	 	 	.music_ID3{
+	 	 		position: absolute;
+	 	 		bottom: 0px;
+	 	 		height: auto;
+	 	 		width: 540px;
+	 	 		background: black;
+	 	 		filter:alpha(Opacity=60);
+	 	 		-moz-opacity:0.6;
+	 	 		opacity: 0.6; 
+	 	 	 }
+	 	 	 	.ID3_title{
+					height: 30px;
+					width: 540px;
+	 	 	 	 }
+	 	 	 	 	.ID3_font{
+	 	 	 	 		color: white;
+	 	 	 	 		font-size: 12px;
+	 	 	 	 		line-height: 20px;
+	 	 	 	 		padding-left: 10px;
+	 	 	 	 	 }
+/* 视频编辑窗口 */
+.new_post_video_container{
+ }
+	.new_post_video_content{
+		position: relative;
+		min-height: 220px;
+		height: auto;
+		width: auto;
+		border-top-style: dashed;
+		border-top-width: 2px;
+		border-top-color: #FFF;
+		border-bottom-style: dashed;
+		border-bottom-width: 2px;
+		border-bottom-color: #FFF;
+		background: #F2F2F2;
+	 }
+		.new_post_video_upload{
+			float: left;
+			height: 220px;
+			width: 269px;
+		 }
+		 	.video_example_div{
+		 		height: 120px;
+		 		width: 120px;
+		 		margin-left: auto;
+		 		margin-right: auto;
+		 		margin-top: 50px;
+		 		border: 2px dashed #a1a1a1;
+		 		border-radius: 10px;
+		 	 }
+		 	 	.video_example_icon_div{
+					height: 60px;
+					width: 60px;
+					margin-top: 15px;
+					margin-left: auto;
+		 			margin-right: auto;
+		 	 	 }
+			 	 	.video_example_icon{
+			 	 		height: 60px;
+			 	 		width: 60px;
+			 	 	 }
+			 	.video_example_text{
+			 		height: 30px;
+			 		width: auto;
+					text-align: center;
+					line-height: 30px;
+					color: #a1a1a1;
+			 	 }
+		.photo_music_file_upload_v{
+	 			position: absolute;
+	 			width: 270px;
+	 			height: 220px;
+	 			top: 0px;
+	 		 }
+		.split_line{
+			float: left;
+			height: 180px;
+			width: 2px;
+			margin-top: 20px;
+			background: #a1a1a1;
+		 }
+		.new_post_video_url{
+			float: left;
+			height: 220px;
+			width: 269px;
+		 }
+		 	.network_example_div{
+		 		height: 120px;
+		 		width: 120px;
+		 		margin-left: auto;
+		 		margin-right: auto;
+		 		margin-top: 50px;
+		 		border: 2px dashed #a1a1a1;
+		 		border-radius: 10px;
+		 	 }
+		 	 	.network_example_icon_div{
+					height: 60px;
+					width: 60px;
+					margin-top: 15px;
+					margin-left: auto;
+		 			margin-right: auto;
+		 	 	 }
+			 	 	.network_example_icon{
+			 	 		height: 60px;
+			 	 		width: 60px;
+			 	 	 }
+			 	.network_example_text{
+			 		height: 30px;
+			 		width: auto;
+					text-align: center;
+					line-height: 30px;
+					color: #a1a1a1;
+			 	 }
+		.new_post_photo_input_url{
+			height: 30px;
+			width: 500px;
+			margin-top: 20px;
+			margin-left: 20px;
+			border: none;
+			font-family: "Microsoft YaHei";
+			font-size: 14px;
+		 }
+		.new_post_photo_input_url:focus{
+			outline: none;
+		}
+		.new_post_photo_input_border{
+			margin-left: 20px;
+			height: 2px;
+			width: 500px;
+			background: yellow;
+		 }
+		 	.new_post_photo_input_bc{
+		 		height: 2px;
+		 		width: 100px;
+		 		margin: 0 auto;
+		 		background: black;
+		 		position: relative;
+		 	 }
+		.video_media_wrapper{
+			height: 100%;
+			width: 100%;
+		 }
+		 	.video_media_player{
+		 		position: absolute;
+		 		width: 540px;
+		 		min-height: 300px;
+		 	 }
+	.new_post_video_text_content{
+		 		min-height: 60px;
+		 		height: auto;
+		 		width: auto;
+		 		background-color: white;
+		 		padding: 5px;
+		 		margin: 10px;
+		 		font-size: 15px;
+		 		font-weight: lighter;
+		 	 }
+	 	.new_post_video_label{
+	 		min-height: 30px;
+	 		height: auto;
+	 		width: auto;
+	 		background-color: white;
+	 		padding: 5px;
+	 		margin: 10px;
+	 		font-size: 16px;
+	 	 }
+/* 文件上传窗口 */
+.new_post_file_container{
+	
+ }
+ 	.new_post_file_content{
+ 		min-height: 220px;
+		height: auto;
+		width: auto;
+		border-top-style: dashed;
+		border-top-width: 2px;
+		border-top-color: #FFF;
+		border-bottom-style: dashed;
+		border-bottom-width: 2px;
+		border-bottom-color: #FFF;
+		background: #F2F2F2;
+ 	 }
+ 	/* 文件示例CSS */
+ 	.file_container{
+ 		height: auto;
+ 		width: 450px;
+ 		margin-top: 35px;
+ 		margin-right: auto;
+ 		margin-left: auto;
+ 	 }
+ 	 	.file_type_icon{
+ 	 		float: left;
+ 	 		height: 150px;
+ 	 		width: 150px;
+ 	 		background: white;
+ 	 		border-radius: 8px;
+ 	 	 }
+	 	.information{
+	 		margin-left: 30px;
+	 	 }
+ 	 	.file_name:before{
+ 	 		content: "文件名称:";
+ 	 		font-family: "Microsoft YaHei";
+ 	 		padding-right: 30px;
+ 	 		line-height: 30px;
+ 	 	 }
+ 	 	.file_name{
+ 	 		float: left;
+ 	 		margin-top: 10px;
+ 	 		height: 30px;
+ 	 		width: 270px;
+ 	 	 }
+ 	 	.file_type:before{
+ 	 		content: "文件类型:";
+ 	 		font-family: "Microsoft YaHei";
+ 	 		padding-right: 30px;
+ 	 		line-height: 30px;
+ 	 	 }
+ 	 	.file_type{
+ 	 		float: left;
+ 	 		height: 30px;
+ 	 		width: 270px;
+ 	 	 }
+ 	 	.file_introduction:before{
+ 	 		content: "文件简介:";
+ 	 		font-family: "Microsoft YaHei";
+ 	 		padding-right: 30px;
+ 	 		line-height: 30px;
+ 	 	 }
+ 	 	.file_introduction{
+ 	 		float: left;
+ 	 		height: 80px;	
+ 	 		width: 270px;
+ 	 	 }
+ 	/* 文件示例截止 */
+ 	.new_post_file_text_content{
+ 		min-height: 60px;
+ 		height: auto;
+ 		width: auto;
+ 		background-color: white;
+ 		padding: 5px;
+ 		margin: 10px;
+ 		font-size: 15px;
+ 		font-weight: lighter;
+ 	 }
+ 	.new_post_file_label{
+ 		min-height: 30px;
+ 		height: auto;
+ 		width: auto;
+ 		background-color: white;
+ 		padding: 5px;
+ 		margin: 10px;
+ 		font-size: 16px;
+ 	 }
+/* END cover*/
 .container{
 	width: 1000px;
 	height: auto;
@@ -47,6 +583,7 @@ div:focus{
  	 				.new_post_label{
  	 					float: left;
  	 					width: 90px;
+ 	 					cursor: pointer;
  	 				 }
  	 				 	.new_post_top{
 							height: 60px;
@@ -58,543 +595,9 @@ div:focus{
 								height: 60px;
 								width: 60px;
 	 	 					 }
-	 	 		/*文字内容编辑框*/
-	 	 		.new_post_text_container{
-					height: auto;
-					width: auto;
-					padding-left: 10px;
-					padding-right: 10px;
-					background-color: white;
-					border-radius: 4px;
-	 	 		 }
 	 	 		
-	 	 		 	.new_post_container_header{
-	 	 		 		height: 35px;
-	 	 		 	 }
-	 	 		 		.new_post_container_header_left{
-	 	 		 			width: auto;
-	 	 		 			float: left;
-	 	 		 			line-height: 35px;
-	 	 		 			font-size: 15px;
-	 	 		 		 }
-	 	 		 		.new_post_container_header_right{
-	 	 		 			float: right;
-	 	 		 			width: auto;
-	 	 		 		 }
-							.new_post_publish_icon{
-								height: 25px;
-								width: 25px;
-								padding-top: 5px; 
-							}
-	 	 		 	.new_post_text_content{
-	 	 		 		min-height: 150px;
-	 	 		 		height: auto;
-	 	 		 		width: auto;
-	 	 		 		background-color: white;
-	 	 		 		padding: 5px;
-	 	 		 		font-size: 15px;
-	 	 		 		font-weight: lighter;
-	 	 		 	 }
-	 	 		 	.new_post_text_label{
-	 	 		 		min-height: 30px;
-	 	 		 		height: auto;
-	 	 		 		width: auto;
-	 	 		 		background-color: white;
-	 	 		 		padding: 5px;
-	 	 		 		font-size: 16px;
-	 	 		 	 }
-	 	 		 	.new_post_bottom{
-	 	 		 		height: 5px;
-	 	 		 		border-bottom-right-radius: 4px;
-	 	 		 		border-bottom-left-radius: 4px;
-	 	 		 	 }
-	 	 		/*图片内容编辑框*/
-	 	 		.new_post_photo_container{
-	 	 			height: auto;
-					width: auto;
-					background-color: white;
-					border-radius: 4px;
-	 	 		 }
-	 	 		 	.new_post_photo_content{
-	 	 		 		position: relative;
-						min-height: 220px;
-						height: auto;
-						width: auto;
-						border-top-style: dashed;
-						border-top-width: 2px;
-						border-top-color: #FFF;
-						border-bottom-style: dashed;
-						border-bottom-width: 2px;
-						border-bottom-color: #FFF;
-						background: #F2F2F2;
-
-	 	 		 	 }
-	 	 		 		.photo_music_file_example_div{
-							width: 60px;
-							height: 60px;
-							float: left;
-							margin-top: 80px;
-							margin-left: 160px;
-							/*
-							border-style: dashed;
-							border-radius: 5px;
-							border-width: 1px;
-							border-color: #a1a1a1;
-							*/
-	 	 		 		 }
-	 	 		 		 	.photo_music_file_example{
-	 	 		 		 		width: 60px;
-	 	 		 		 		height: 60px;
-	 	 		 		 	 }
- 	 		 		 	.photo_music_file_example_text{
- 	 		 		 		float: left;
- 	 		 		 		height: 60px;
- 	 		 		 		width: auto;
- 	 		 		 		margin-top: 80px;
- 	 		 		 		margin-left: 50px;
- 	 		 		 		line-height: 60px;
- 	 		 		 		font-size: 20px;
- 	 		 		 		color: #a1a1a1;
- 	 		 		 	 }
- 	 		 		 	 	.photo_music_file_example_gif{
- 	 		 		 	 		height: 23px;
-								margin-top: 19px;
- 	 		 		 	 	}
- 	 		 		 	.new_photo{
- 	 		 		 		width: 540px;
- 	 		 		 	 }
- 	 		 		 	.photo_file_upload_more_div{
- 	 		 		 		position: relative;
- 	 		 		 		height: 40px;
- 	 		 		 		border-radius: 10px;
-							margin: 0 5px 5px 5px;
-							border: 2px dashed #a1a1a1;
- 	 		 		 	 }
-	 	 		 		 	.upload_container{
-	 	 		 		 		height: 40px;
-	 	 		 		 		width: 200px;
-	 	 		 		 		margin: 0 auto;
-	 	 		 		 	 }
-	 	 		 		 	.photo_music_file_upload_more{
-	 	 		 		 		position: absolute;
-			 	 				width: 540px;
-			 	 				height: 40px;
-			 	 				top: 0px;
-	 	 		 		 	 }	
-	 	 		 		 		.photo_example{
-	 	 		 		 			height: 36px;
-	 	 		 		 			width: 36px;
-	 	 		 		 			margin-top: 2px;
-	 	 		 		 			float: left;
-	 	 		 		 		 }
-	 	 		 		 		 	.photo_icon{
-	 	 		 		 		 		height: 36px;
-	 	 		 		 		 		width: 36px;
-	 	 		 		 		 	 }
-	 	 		 		 		.photo_text{
-	 	 		 		 			float: right;
-	 	 		 		 			height: 36px;
-	 	 		 		 			margin-top: 2px;
-	 	 		 		 			padding-right: 30px;
-	 	 		 		 			font-size: 18px;
-	 	 		 		 			line-height: 36px;
-	 	 		 		 			color: #a1a1a1;
-	 	 		 		 		 }
-	 	 		 	.new_post_photo_text_content{
-	 	 		 		min-height: 120px;
-	 	 		 		height: auto;
-	 	 		 		width: auto;
-	 	 		 		background-color: white;
-	 	 		 		padding: 5px;
-	 	 		 		margin: 10px;
-	 	 		 		font-size: 15px;
-	 	 		 		font-weight: lighter;
-	 	 		 	 }
-	 	 		 	.new_post_photo_label{
-	 	 		 		min-height: 30px;
-	 	 		 		height: auto;
-	 	 		 		width: auto;
-	 	 		 		background-color: white;
-	 	 		 		padding: 5px;
-	 	 		 		margin: 10px;
-	 	 		 		font-size: 16px;
-	 	 		 		
-	 	 		 	 }
-	 	 		/*音乐内容编辑框*/
-	 	 		.new_post_music_container{
-					height: auto;
-					width: auto;
-					background-color: white;
-					border-radius: 4px;
-	 	 		 }
-	 	 		 	.new_post_music_content{
-	 	 		 		position: relative;
-	 	 		 		border-top-style: dashed;
-						border-top-width: 2px;
-						border-top-color: #FFF;
-						border-bottom-style: dashed;
-						border-bottom-width: 2px;
-						border-bottom-color: #FFF;
-	 	 		 		height: 220px;
-	 	 		 		background-color: #F2F2F2;
-	 	 		 	 }
-	 	 		 	
-	 	 		 		.new_post_music_search:before{
-	 	 		 			content: url(src/icon_new_post/music_example_4.png);
-	 	 		 			position: absolute;
-	 	 		 			z-index: 2;
-	 	 		 		 }
-	 	 		 		.new_post_music_search{
-							height: 34px;
-							width: auto;
-							margin-left: 30px;
-							padding-top: 20px;
-	 	 		 		 }
-		 	 		 	 	.new_post_music_search_input{
-								width: 440px;
-								height: 30px;
-								background: white;
-								border-width: 0px;
-								padding-left: 30px;
-								border-radius: 4px;
-		 	 		 	 	 }
-		 	 		 	 .new_post_music_submit_div{
-							height: 30px;
-							margin-top: 10px;
-							margin-right: 40px;
-		 	 		 	 }
-							.new_post_music_submit{
-								height: 30px;
-								width: 80px;
-								background-color: #529ECC;
-								float: right;
-								border: none;
-								border-radius: 4px;
-							 }
-							 .new_post_music_local{
-		 	 		 	 		height: 30px;
-								width: 80px;
-								background-color: #529ECC;
-								float: right;
-								border: none;
-								border-radius: 4px;
-								margin-right: 20px;
-		 	 		 	 	 }
-		 	 		
-		 	 			.music_icon{
-		 	 				position: relative;
-		 	 				margin: 5px;
-		 	 				height: 50px;
-		 	 				width: 50px;
-		 	 			 }
-		 	 		.photo_music_file_upload{
-		 	 			position: absolute;
-		 	 			width: 540px;
-		 	 			height: 220px;
-		 	 			top: 0px;
-		 	 		 }
-		 	 		.photo_music_file_input{
-		 	 			position: absolute;
-						top: 0;
-						right: 0;
-						margin: 0;
-						padding: 0;
-						border: 0;
-						opacity: 0;
-						width: 100%;
-						height: 100%;
-						cursor: pointer;
-		 	 		 }
-	 	 		 	.new_post_music_text_content{
-	 	 		 		min-height: 60px;
-	 	 		 		height: auto;
-	 	 		 		width: auto;
-	 	 		 		background-color: white;
-	 	 		 		padding: 5px;
-	 	 		 		margin: 10px;
-	 	 		 		font-size: 15px;
-	 	 		 		font-weight: lighter;
-	 	 		 	 }
-	 	 		 	.new_post_music_label{
-	 	 		 		min-height: 30px;
-	 	 		 		height: auto;
-	 	 		 		width: auto;
-	 	 		 		background-color: white;
-	 	 		 		padding: 5px;
-	 	 		 		margin: 10px;
-	 	 		 		font-size: 16px;
-	 	 		 		
-	 	 		 	 }
-	 	 		 	.music_cover{
-	 	 		 		width: 540px;
-	 	 		 		display: block;
-	 	 		 		position: relative;
-	 	 		 		
-	 	 		 	 }
-	 	 		 	 	.music_picture{
-							position: relative;
-	 	 		 	 	 }
-	 	 		 	 	.music_ID3{
-	 	 		 	 		position: absolute;
-	 	 		 	 		bottom: 0px;
-	 	 		 	 		height: auto;
-	 	 		 	 		width: 540px;
-	 	 		 	 		background: black;
-	 	 		 	 		filter:alpha(Opacity=60);
-	 	 		 	 		-moz-opacity:0.6;
-	 	 		 	 		opacity: 0.6; 
-	 	 		 	 	 }
-	 	 		 	 	 	.ID3_title{
-								height: 30px;
-								width: 540px;
-	 	 		 	 	 	 }
-	 	 		 	 	 	 	.ID3_font{
-	 	 		 	 	 	 		color: white;
-	 	 		 	 	 	 		font-size: 12px;
-	 	 		 	 	 	 		line-height: 20px;
-	 	 		 	 	 	 		padding-left: 10px;
-	 	 		 	 	 	 	 }
-	 	 		/* 视频编辑窗口 */
-	 	 		.new_post_video_container{
-	 	 			height: auto;
-					width: auto;
-					background-color: white;
-					border-radius: 4px;
-	 	 		 }
-					.new_post_video_content{
-						position: relative;
-						min-height: 220px;
-						height: auto;
-						width: auto;
-						border-top-style: dashed;
-						border-top-width: 2px;
-						border-top-color: #FFF;
-						border-bottom-style: dashed;
-						border-bottom-width: 2px;
-						border-bottom-color: #FFF;
-						background: #F2F2F2;
-					 }
-						.new_post_video_upload{
-							float: left;
-							height: 220px;
-							width: 269px;
-						 }
-						 	.video_example_div{
-						 		height: 120px;
-						 		width: 120px;
-						 		margin-left: auto;
-						 		margin-right: auto;
-						 		margin-top: 50px;
-						 		border: 2px dashed #a1a1a1;
-						 		border-radius: 10px;
-						 	 }
-						 	 	.video_example_icon_div{
-									height: 60px;
-									width: 60px;
-									margin-top: 15px;
-									margin-left: auto;
-						 			margin-right: auto;
-						 	 	 }
-							 	 	.video_example_icon{
-							 	 		height: 60px;
-							 	 		width: 60px;
-							 	 	 }
-							 	.video_example_text{
-							 		height: 30px;
-							 		width: auto;
-									text-align: center;
-									line-height: 30px;
-									color: #a1a1a1;
-							 	 }
-						.photo_music_file_upload_v{
-			 	 			position: absolute;
-			 	 			width: 270px;
-			 	 			height: 220px;
-			 	 			top: 0px;
-			 	 		 }
-						.split_line{
-							float: left;
-							height: 180px;
-							width: 2px;
-							margin-top: 20px;
-							background: #a1a1a1;
-						 }
-						.new_post_video_url{
-							float: left;
-							height: 220px;
-							width: 269px;
-						 }
-						 	.network_example_div{
-						 		height: 120px;
-						 		width: 120px;
-						 		margin-left: auto;
-						 		margin-right: auto;
-						 		margin-top: 50px;
-						 		border: 2px dashed #a1a1a1;
-						 		border-radius: 10px;
-						 	 }
-						 	 	.network_example_icon_div{
-									height: 60px;
-									width: 60px;
-									margin-top: 15px;
-									margin-left: auto;
-						 			margin-right: auto;
-						 	 	 }
-							 	 	.network_example_icon{
-							 	 		height: 60px;
-							 	 		width: 60px;
-							 	 	 }
-							 	.network_example_text{
-							 		height: 30px;
-							 		width: auto;
-									text-align: center;
-									line-height: 30px;
-									color: #a1a1a1;
-							 	 }
-						.new_post_photo_input_url{
-							height: 30px;
-							width: 500px;
-							margin-top: 20px;
-							margin-left: 20px;
-							border: none;
-							font-family: "Microsoft YaHei";
-							font-size: 14px;
-						 }
-						.new_post_photo_input_url:focus{
-							outline: none;
-						}
-						.new_post_photo_input_border{
-							margin-left: 20px;
-							height: 2px;
-							width: 500px;
-							background: yellow;
-						 }
-						 	.new_post_photo_input_bc{
-						 		height: 2px;
-						 		width: 100px;
-						 		margin: 0 auto;
-						 		background: black;
-						 		position: relative;
-						 	 }
-						.video_media_wrapper{
-							height: 100%;
-							width: 100%;
-						 }
-						 	.video_media_player{
-						 		position: absolute;
-						 		width: 540px;
-						 		min-height: 300px;
-						 	 }
-					.new_post_video_text_content{
-	 	 		 		min-height: 60px;
-	 	 		 		height: auto;
-	 	 		 		width: auto;
-	 	 		 		background-color: white;
-	 	 		 		padding: 5px;
-	 	 		 		margin: 10px;
-	 	 		 		font-size: 15px;
-	 	 		 		font-weight: lighter;
-	 	 		 	 }
-	 	 		 	.new_post_video_label{
-	 	 		 		min-height: 30px;
-	 	 		 		height: auto;
-	 	 		 		width: auto;
-	 	 		 		background-color: white;
-	 	 		 		padding: 5px;
-	 	 		 		margin: 10px;
-	 	 		 		font-size: 16px;
-	 	 		 	 }
-	 	 		/* 文件上传窗口 */
-	 	 		.new_post_file_container{
-					height: auto;
-					width: auto;
-					background-color: white;
-					border-radius: 4px;
-	 	 		 }
-	 	 		 	.new_post_file_content{
-	 	 		 		min-height: 220px;
-						height: auto;
-						width: auto;
-						border-top-style: dashed;
-						border-top-width: 2px;
-						border-top-color: #FFF;
-						border-bottom-style: dashed;
-						border-bottom-width: 2px;
-						border-bottom-color: #FFF;
-						background: #F2F2F2;
-	 	 		 	 }
-	 	 		 	/* 文件示例CSS */
-	 	 		 	.file_container{
-	 	 		 		height: auto;
-	 	 		 		width: 450px;
-	 	 		 		margin-top: 35px;
-	 	 		 		margin-right: auto;
-	 	 		 		margin-left: auto;
-	 	 		 	 }
-	 	 		 	 	.file_type_icon{
-	 	 		 	 		float: left;
-	 	 		 	 		height: 150px;
-	 	 		 	 		width: 150px;
-	 	 		 	 		background: white;
-	 	 		 	 		border-radius: 8px;
-	 	 		 	 	 }
-	 	 		 	 	.information{
-	 	 		 	 		margin-left: 30px;
-	 	 		 	 	 }
-	 	 		 	 	.file_name:before{
-	 	 		 	 		content: "文件名称:";
-	 	 		 	 		font-family: "Microsoft YaHei";
-	 	 		 	 		padding-right: 30px;
-	 	 		 	 		line-height: 30px;
-	 	 		 	 	 }
-	 	 		 	 	.file_name{
-	 	 		 	 		float: left;
-	 	 		 	 		margin-top: 10px;
-	 	 		 	 		height: 30px;
-	 	 		 	 		width: 270px;
-	 	 		 	 	 }
-	 	 		 	 	.file_type:before{
-	 	 		 	 		content: "文件类型:";
-	 	 		 	 		font-family: "Microsoft YaHei";
-	 	 		 	 		padding-right: 30px;
-	 	 		 	 		line-height: 30px;
-	 	 		 	 	 }
-	 	 		 	 	.file_type{
-	 	 		 	 		float: left;
-	 	 		 	 		height: 30px;
-	 	 		 	 		width: 270px;
-	 	 		 	 	 }
-	 	 		 	 	.file_introduction:before{
-	 	 		 	 		content: "文件简介:";
-	 	 		 	 		font-family: "Microsoft YaHei";
-	 	 		 	 		padding-right: 30px;
-	 	 		 	 		line-height: 30px;
-	 	 		 	 	 }
-	 	 		 	 	.file_introduction{
-	 	 		 	 		float: left;
-	 	 		 	 		height: 80px;	
-	 	 		 	 		width: 270px;
-	 	 		 	 	 }
-	 	 		 	/* 文件示例截止 */
-	 	 		 	.new_post_file_text_content{
-	 	 		 		min-height: 60px;
-	 	 		 		height: auto;
-	 	 		 		width: auto;
-	 	 		 		background-color: white;
-	 	 		 		padding: 5px;
-	 	 		 		margin: 10px;
-	 	 		 		font-size: 15px;
-	 	 		 		font-weight: lighter;
-	 	 		 	 }
-	 	 		 	.new_post_file_label{
-	 	 		 		min-height: 30px;
-	 	 		 		height: auto;
-	 	 		 		width: auto;
-	 	 		 		background-color: white;
-	 	 		 		padding: 5px;
-	 	 		 		margin: 10px;
-	 	 		 		font-size: 16px;
-	 	 		 	 }
+	 	 		
+	 	 		
 	 	 		/* 用户动态 */
 	 	 		.post_content{
 	 	 			height: auto;
