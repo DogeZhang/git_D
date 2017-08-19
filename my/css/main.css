@@ -71,10 +71,69 @@ div:focus{
 	 		margin-right: 10px;
 	 	 }
 	 	.new_post_bottom{
-	 		height: 5px;
-	 		border-bottom-right-radius: 4px;
-	 		border-bottom-left-radius: 4px;
+	 		height: 40px;
+	 		width: 540px;
+	 		margin-left: 10px;
+
 	 	 }
+		 	.new_post_bottom_cancel{
+				border: none;
+				border-radius: 4px;
+				margin-top: 10px;
+				height: 30px;
+				width: 80px;
+				float: left;
+		 	 }
+		 	.new_post_bottom_publish{
+		 		border: none;
+		 		border-radius: 4px;
+		 		margin-top: 10px;
+		 		margin-left: 330px;
+		 		height: 30px;
+		 		width: 100px;
+		 		float: left;
+		 		background-color: red;
+		 	 }
+		.are_you_sure{
+			position: absolute;
+			border-radius: 4px;
+			margin-top: 60px;
+			margin-left: -10px;
+			width: 540px;
+			height: 40px;
+			background: white;
+			line-height: 40px;
+		 }
+		.ays_icon{
+			margin-left: 10px;
+			height: 30px;
+			width: 30px;
+			float: left;
+		 }
+		.ays_text{
+			margin-left: 10px;
+			float: left;
+			width: auto;
+		 }
+		.button_ays_no{
+			border: none;
+			border-radius: 4px;
+			margin-top: 5px;
+			margin-right: 20px;
+			height: 30px;
+			width: 80px;
+			background: red;
+			float: right;
+		 }
+		.button_ays_yes{
+			border: none;
+			border-radius: 4px;
+			margin-top: 5px;
+			margin-right: 20px;
+			height: 30px;
+			width: 80px;
+			float: right;
+		 }
 /*图片内容编辑框*/
 .new_post_photo_container{
  }
@@ -197,7 +256,7 @@ div:focus{
 	 }
 	 	
 	 	.new_post_music_search:before{
- 			content: url(src/icon_new_post/music_example_4.png);
+ 			content: url("../src/icon_new_post/music_example_4.png");
  			position: absolute;
  			z-index: 2;
  		 }
@@ -318,7 +377,7 @@ div:focus{
 		position: relative;
 		min-height: 220px;
 		height: auto;
-		width: auto;
+		width: 540px;
 		border-top-style: dashed;
 		border-top-width: 2px;
 		border-top-color: #FFF;

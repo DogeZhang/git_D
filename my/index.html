@@ -113,11 +113,33 @@
                     	<img class="new_post_publish_icon" src="src/icon_new_post/publish_2.svg"/>
                      </div>
                  </div>
+                <div>
+					<div id="changwenzhang" style="display: none;position:absolute;margin-left: -105px;height: 30px;width: 100px;background: white;line-height: 30px;cursor: pointer;border-radius: 4px;">
+						<div style="height: 30px;width: 30px;float: left;margin-left:5px;margin-right: 10px;">
+							<img style="height: 30px;width: 30px;" src="src/icon_new_post/changwenzhang.svg">
+						 </div>
+						<span style="">长文章</span>
+					 </div>
+				 </div>
                 <div id="new_post_text_content" class="new_post_text_content" contenteditable="true">
                 	<span style="color:#999">来写点什么吧！</span>
                  </div>
                 <div id="new_post_text_label" class="new_post_text_label" contenteditable="true">
                 	<span style="color:#999">#标签</span>
+                 </div>
+                <div class="new_post_bottom">
+                	<button id="button_text_cancel" class="new_post_bottom_cancel"><span>取消</span></button>
+                	<button id="button_text_publish" class="new_post_bottom_publish"><span>发布！</span></button>
+                	<div id="are_you_sure_text" class="are_you_sure" style="display: none">
+                		<div class="ays_icon">
+                			<img src="src/icon_new_post/queding_quxiao.svg" style="height: 30px;width: 30px;margin-top: 5px;">
+                		 </div>
+                		<div class="ays_text">
+                			<span>真的要取消吗？</span>
+                		 </div>
+                		<button id="let_think_text" class="button_ays_no"><span>再想想</span></button>
+                		<button id="leave_text" class="button_ays_yes"><span>离开</span></button>
+	                 </div>
                  </div>
                 <div style="height: 10px"></div>
              </div>
@@ -172,7 +194,21 @@
                 <div id="new_post_photo_label" class="new_post_photo_label" contenteditable="true">
                 	<span style="color:#999">#标签</span>
                  </div>
-                <div class="new_post_bottom" style="background: #5F6CFE"></div>
+                <div class="new_post_bottom">
+                	<button id="button_photo_cancel" class="new_post_bottom_cancel"><span>取消</span></button>
+                	<button id="button_photo_publish" class="new_post_bottom_publish"><span>发布！</span></button>
+                	<div id="are_you_sure_photo" class="are_you_sure" style="display: none">
+                		<div class="ays_icon">
+                			<img src="src/icon_new_post/queding_quxiao.svg" style="height: 30px;width: 30px;margin-top: 5px;">
+                		 </div>
+                		<div class="ays_text">
+                			<span>真的要取消吗？这会失去所有的图片。</span>
+                		 </div>
+                		<button id="let_think_photo" class="button_ays_no"><span>再想想</span></button>
+                		<button id="leave_photo" class="button_ays_yes"><span>离开</span></button>
+	                 </div>
+                 </div>
+                <div style="height: 10px"></div>
          	 </div>
          	<!-- 音乐编辑 -->
         	<div id="new_post_music_container" class="new_post_music_container new_post_container" style="display: none;">
@@ -223,8 +259,8 @@
 						<div><span id="album" class="ID3_font"></span></div>
 					 </div>
                  </div>
-                <div class="media-wrapper" id="music_media_wrapper" style="display: none;">
-	                <audio id="music_player" class="mejs__player" preload="none" controls style="max-width:100%;" src="" type="audio/mp3">
+                <div class="media-wrapper" id="music_media_wrapper" style="display: none; width: 540px;">
+	                <audio id="music_player" class="mejs__player" preload="none" controls style="width: 540px;" src="" type="audio/mp3">
 	                    <!-- 娱乐天空 - 陈奕迅.flac
 	                    	 最后的抉择 - 布拉格恋人 (프라하의 연인).mp3
 	                    -->
@@ -237,10 +273,25 @@
                 <div id="new_post_music_label" class="new_post_music_label" contenteditable="true">
                 	<span style="color:#999">#标签</span>
                  </div>
+                <!-- 取消界面 -->
+                <div class="new_post_bottom">
+                	<button id="button_music_cancel" class="new_post_bottom_cancel"><span>取消</span></button>
+                	<button id="button_music_publish" class="new_post_bottom_publish"><span>发布！</span></button>
+                	<div id="are_you_sure_music" class="are_you_sure" style="display: none">
+                		<div class="ays_icon">
+                			<img src="src/icon_new_post/queding_quxiao.svg" style="height: 30px;width: 30px;margin-top: 5px;">
+                		 </div>
+                		<div class="ays_text">
+                			<span>真的要取消吗？这会失去这首歌曲。</span>
+                		 </div>
+                		<button id="let_think_music" class="button_ays_no"><span>再想想</span></button>
+                		<button id="leave_music" class="button_ays_yes"><span>离开</span></button>
+	                 </div>
+                 </div>
                 <div style="height: 10px"></div>
         	 </div>
         	<!-- 视频编辑 -->
-        	<div id="new_post_video_container" class="new_post_video_container new_post_container" style="display: none;">
+        	<div id="new_post_video_container" class="new_post_container new_post_video_container " style="display: none;">
         		<!-- 窗口标头 -->
         		<div class="new_post_container_header">
                     <div class="new_post_container_header_left">
@@ -279,7 +330,11 @@
                  	 </div>
                  	
                  </div>	 
-				<form>
+                <div id="video_media_wrapper" class="video_media_wrapper" style="display: none">
+	                <video id="video_player" class="mejs__player" style="width: 540px; height: 100%; display: block" poster="" src="" type="video/mp4" loop preload="preload" controls="controls" playsinline="true" webkit-playsinline="true" height="" width="">
+	                </video>
+	             </div>
+				<form style="display: none;">
 					<div class="new_post_video_content" style="background: white;">
 						<input type="url" name="video-url" class="new_post_photo_input_url" style="">
 						<div class="new_post_photo_input_border">
@@ -287,16 +342,28 @@
 						 </div>
 					 </div>
 				 </form>
-                <div id="video_media_wrapper" class="video_media_wrapper" style="display: none">
-	                <video id="video_player" class="mejs__player" style="width: 100%; height: 100%; display: block" poster="" src="" type="video/mp4" loop preload controls playsinline webkit-playsinline height="" width="">
-	                </video>
-	             </div>
+                
 				<!-- 底部标签 -->
 				<div id="new_post_video_text_content" class="new_post_video_text_content" contenteditable="true" style="display: none;">
-                	<span style="color:#999">something...</span>
+                	<span style="color:#999">say somethimg...?</span>
                  </div>
                 <div id="new_post_video_label" class="new_post_video_label" contenteditable="true">
                 	<span style="color:#999">#标签</span>
+                 </div>
+                <!-- 取消界面 -->
+                <div class="new_post_bottom">
+                	<button id="button_video_cancel" class="new_post_bottom_cancel"><span>取消</span></button>
+                	<button id="button_video_publish" class="new_post_bottom_publish"><span>发布！</span></button>
+                	<div id="are_you_sure_video" class="are_you_sure" style="display: none">
+                		<div class="ays_icon">
+                			<img src="src/icon_new_post/queding_quxiao.svg" style="height: 30px;width: 30px;margin-top: 5px;">
+                		 </div>
+                		<div class="ays_text">
+                			<span>真的要取消吗？这会失去这段视频。</span>
+                		 </div>
+                		<button id="let_think_video" class="button_ays_no"><span>再想想</span></button>
+                		<button id="leave_video" class="button_ays_yes"><span>离开</span></button>
+	                 </div>
                  </div>
                 <div style="height: 10px"></div>
         	 </div>

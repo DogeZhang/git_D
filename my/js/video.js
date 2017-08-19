@@ -4,15 +4,16 @@
 	视频播放
 
 */
-
+var file = null;
 function loadFile_video(input){
-	var file = input.files[0],
+	 	file = input.files[0],
         url = file.urn || file.name;
         video_url = URL.createObjectURL(file);
 		document.getElementById("video_player").src = video_url;
 		//$('#video_media_wrapper').append('<video id="video_player" class="mejs__player" style="width: 100%; height: 100%; display: block" poster="" src="" type="video/mp4" loop preload controls playsinline webkit-playsinline height="" width=""></video>');
-		$('#video_media_wrapper').css("display","block");
-	   	$('.new_post_video_content').css("display","none");
+		
+		$('#video_media_wrapper').css('display','');
+	   	$('.new_post_video_content').css('display','none');
 		/*
 		调整视频窗口大小
 		并添加封面
@@ -35,5 +36,34 @@ function loadFile_video(input){
 $(document).ready(function(){
 	$('.new_post_photo_input_url').focus(function(){
 		$('.new_post_photo_input_bc').addClass("video_url_input");
+	});
+	/* 打开-关闭视频编辑窗口 */
+	$('#new_post_video').click(function(){
+		$('#cover').css("display","");
+		$('#new_post_video_container').slideDown(250);
+	});
+	$('#button_video_cancel').click(function(){
+		var texq = $('#new_post_video_text_content span').html();
+		if (texq === "say somethimg...?" && file == null) {
+			$('#new_post_video_container').hide();
+			$('#cover').slideUp();
+		}
+		else{
+			$('#are_you_sure_video').slideDown(250);
+			$('#leave_video').click(function(){
+				file = null;
+				document.getElementById("video_player").src = "";
+				$('#video_media_wrapper').hide();
+				$('.new_post_video_content').show();
+				$('#new_post_video_text_content span').html('say somethimg...?');
+				$('#new_post_video_text_content').hide();
+				$('#new_post_video_container').hide();
+				$('#are_you_sure_video').slideUp(250);
+				$('#cover').slideUp();
+			});
+			$('#let_think_video').click(function(){
+				$('#are_you_sure_video').slideUp(250);
+			})
+		}
 	});
 });
