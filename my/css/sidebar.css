@@ -70,7 +70,7 @@ html *:after {
 			position: relative;
 		 }       /* 菜单信息 */
 			
- 	        .icon{
+ 	        .menu-icon{
  	        	padding:4px;
 				font-size: 33px;
 				color:#F0FCFF;
