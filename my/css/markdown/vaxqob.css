@@ -1,14 +1,3 @@
-/* considering the [lib.iui](https://github.com/tnga/lib.iui) src directory in version 0.0, the following are use here (paste with order):
- * - ~i_skins/_default.scss
- * - ~_i_font_def.scss
- * - ~_i_base.scss
-
- * @NOTE always specify what have been used (pasted); in other to now how to update
-*/
-
-
-// /* Global's variables déclarations
-// ----------------------------------*/
 
 $global-min-width: 280px ;
 $global-max-width: 1400px ;
@@ -233,10 +222,9 @@ _____________________________________________________*/
 
     min-width: $global-min-width;
     max-width: $global-max-width;
-    width: 100%;
-    margin: -5px auto 0px auto ;
-    position: relative;
-    z-index: -1;
+    position: fixed;
+    top:0px;
+    left:60px;
 }
 
 body {
